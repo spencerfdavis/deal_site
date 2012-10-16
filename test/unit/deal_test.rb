@@ -5,6 +5,11 @@ class DealTest < ActiveSupport::TestCase
     assert FactoryGirl.build(:deal).valid?
   end
   
+  test "publisher returns correct publisher" do 
+    d = FactoryGirl.create(:deal)
+    assert d.advertiser.publisher.name, d.publisher
+  end
+  
   #Changed previous test to give ample time to prevent
   #occasional hiccup depending on developer's machine speeds
   test "over should honor current time" do
