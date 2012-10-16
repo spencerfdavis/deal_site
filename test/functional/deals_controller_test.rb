@@ -2,8 +2,15 @@ require 'test_helper'
 
 class DealsControllerTest < ActionController::TestCase
   test "should get index" do
+    puts "Test boyzz"
+    puts "Before Time:#{Time.zone.now}"
+    Deal.all
+    puts "After Time:#{Time.zone.now}"
+        
     FactoryGirl.create_list(:deal, 10)
+    puts "Before Time:#{Time.zone.now}"    
     get :index
+    puts "After Time:#{Time.zone.now}"    
     assert_response :success
     assert_not_nil assigns(:deals)
   end

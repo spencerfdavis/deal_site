@@ -3,7 +3,8 @@ class DealsController < ApplicationController
   before_filter :set_view_paths, only: :show
 
   def index
-    @deals = Deal.all
+    #@deals = Deal.all
+    @deals = Deal.paginate(:page => params[:page])     
   end
 
   def show
