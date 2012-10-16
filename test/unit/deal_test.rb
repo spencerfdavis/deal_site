@@ -24,7 +24,8 @@ class DealTest < ActiveSupport::TestCase
   	#current_time > end_at (original timestamp)
   	deal.end_at = time
   	assert deal.over?, "Deal should be over"
-  end  
+  end 
+  
   
   ############## OLD Test ###############################
   # # I think this is a bad test and it fails sometimes
