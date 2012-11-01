@@ -1,4 +1,5 @@
 #Migrates all old data to new format
+desc "Migrates old deal data to new format.  Requires publisher, filename, and theme parameters"
 task :migrate_old_deal_data => :environment do
   publisher, filename, theme = ENV['publisher'], ENV['filename'], ENV['theme']
   if publisher.blank? || filename.blank? || theme.blank?
